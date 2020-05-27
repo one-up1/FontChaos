@@ -22,8 +22,6 @@ namespace FontChaos
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            long start = Environment.TickCount;
-
             // Haal een array op van alle geinstalleerde lettertypes.
             System.Windows.Media.FontFamily[] fonts;
             using (InstalledFontCollection installedFonts = new InstalledFontCollection())
@@ -41,7 +39,6 @@ namespace FontChaos
                 }
             }
             Console.WriteLine(fonts.Length + " fonts available");
-            Console.WriteLine((Environment.TickCount - start) + "ms");
 
             Random random = new Random();
             foreach (char c in text)
@@ -51,8 +48,6 @@ namespace FontChaos
                 run.FontSize = 18;
                 textBlock.Inlines.Add(run);
             }
-
-            Console.WriteLine((Environment.TickCount - start) + "ms");
         }
     }
 }
