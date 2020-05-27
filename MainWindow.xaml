@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FontChaos"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="FontChaos" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -21,16 +21,16 @@
             Height="Auto"
             TextWrapping="Wrap"
             AcceptsReturn="True"
-            VerticalScrollBarVisibility="Visible"
-            Text="TextBox" />
+            VerticalScrollBarVisibility="Visible" />
 
         <Button
             Grid.Row="1"
             Name="button"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Bottom"
-            Width="75"
-            Content="Button"/>
+            HorizontalAlignment="Stretch"
+            Width="Auto"
+            Height="50"
+            Content="Chaos!"
+            Click="button_Click"/>
 
     </Grid>
 </Window>
